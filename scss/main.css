@@ -2,10 +2,23 @@
   opacity: 0;
 }
 
-.mainContainer div {
+.mainContainer > div {
   border: solid 2px rgb(77, 77, 77);
   padding: 8px;
   margin: 16px;
+}
+.mainContainer > div button {
+  border: solid 2px rgb(77, 77, 77);
+  padding: 8px;
+  margin: 16px;
+  background: none;
+  border-radius: 1000px;
+  color: white;
+  text-shadow: 0 1px 3px black;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 1px;
 }
 .mainContainer span {
   display: block;
@@ -25,3 +38,19 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+#gradient_container {
+  position: relative;
+  z-index: 0;
+}
+#gradient_container #transition_element {
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+}
+#gradient_container #color button {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  background: red;
+}/*# sourceMappingURL=main.css.map */

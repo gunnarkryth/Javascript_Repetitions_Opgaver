@@ -1,12 +1,24 @@
+// #region
+@import "./box";
+
 .hidden {
   opacity: 0;
 }
 
 .mainContainer {
-  div {
-    border: solid 2px rgb(77, 77, 77);
-    padding: 8px;
-    margin: 16px;
+  > div {
+    @include box;
+    button {
+      @include box;
+      background: none;
+      border-radius: 1000px;
+      color: white;
+      text-shadow: 0 1px 3px black;
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 1px;
+    }
   }
   span {
     display: block;
@@ -26,4 +38,27 @@ body {
   margin: auto;
   display: flex;
   flex-direction: column;
+}
+// #endregion
+
+// <div id="gradient_container">
+// <div id="transition_element"></div>
+// <button id="color_button">Random color</button>
+// </div>
+
+#gradient_container {
+  position: relative;
+  z-index: 0;
+  #transition_element {
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+  }
+  #color button {
+    position: absolute;
+
+    z-index: 1;
+    opacity: 0;
+    background: red;
+  }
 }
